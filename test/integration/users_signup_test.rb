@@ -9,7 +9,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                          password:              "foo",
                                          password_confirmation: "bar" } }
    end
-   assert_template 'users/new'
+    assert_template 'users/new'
     assert_select 'div#<CSS id for error explanation>'
     assert_select 'div.<CSS class for field with error>'
   end
@@ -26,3 +26,4 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_not flash.FILL_IN
   end
 end
+
