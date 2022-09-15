@@ -21,6 +21,9 @@ gem "importmap-rails"
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 gem "bcrypt", "3.1.13"
+gem "faker",   "2.21.0"
+gem "will_paginate",            "3.3.1"
+gem "bootstrap-will_paginate",  "1.0.0"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
