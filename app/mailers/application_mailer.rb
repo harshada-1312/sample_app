@@ -1,4 +1,7 @@
 class ApplicationMailer < ActionMailer::Base
- 
-end default from: "user@realdomain.com"
+  
+  default from: "harshada.nextech@gmail.com" # <- Make sure it's not this example adddress
   layout "mailer"
+ 
+
+end 
