@@ -35,8 +35,8 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     patch user_path(@other_user), params: {
                                     user: { password:              "password",
                                             password_confirmation: "password",
-                                            admin: FILL_IN } }
-    assert_not @other_user.FILL_IN.admin?
+                                            admin: true} }
+    assert_not @other_user.reload.admin?
   end
   
   test "should redirect edit when logged in as wrong user" do

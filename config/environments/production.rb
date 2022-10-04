@@ -61,8 +61,25 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "sample_app_production"
+ 
+ 
+  host = 'gmail.com' # Don't use this literally; use your local dev host instead
+  # Use this on the cloud IDE.
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :user_name            => ENV['harshada.gujar1312@gmail.com'],
+  :password             => ENV['fzdwsdxszrkzebtj'],
+  :authentication       => "plain",
+  :enable_starttls_auto => true
+ }
+ # Use this if developing on localhost.
+ config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+  
 
   config.action_mailer.perform_caching = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

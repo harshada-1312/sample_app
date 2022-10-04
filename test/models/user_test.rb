@@ -54,14 +54,6 @@ test "email addresses should be saved as lowercase" do
   assert_equal mixed_case_email.downcase, @user.reload.email
 end
 test "authenticated? should return false for a user with nil digest" do
-  assert_not @user.authenticated?('')
-end
-
-test "associated microposts should be destroyed" do
-  @user.save
-  @user.microposts.create!(content: "Lorem ipsum")
-  assert_difference 'Micropost.count', -1 do
-    @user.destroy
-  end
+  assert_not @user.authenticated?(:remember, '')
 end
 end
