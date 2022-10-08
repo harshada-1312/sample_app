@@ -19,6 +19,8 @@ gem "bootstrap-sass", "3.4.1"
 gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+gem "active_storage_validations", "0.9.8"
+gem "image_processing",           "1.12.2"
 gem "turbo-rails"
 gem "bcrypt", "3.1.13"
 gem "faker",   "2.21.0"
