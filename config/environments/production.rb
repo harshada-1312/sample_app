@@ -63,14 +63,14 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "sample_app_production"
  
  
-  host = 'gmail.com' # Don't use this literally; use your local dev host instead
+  host = 'localhost:3000' # Don't use this literally; use your local dev host instead
   # Use this on the cloud IDE.
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :user_name            => ENV['harshada.gujar1312@gmail.com'],
-  :password             => ENV['fzdwsdxszrkzebtj'],
+  :user_name            => 'harshada.gujar1312@gmail.com'],
+  :password             => 'fzdwsdxszrkzebtj'],
   :authentication       => "plain",
   :enable_starttls_auto => true
  }
